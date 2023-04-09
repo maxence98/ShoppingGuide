@@ -8,12 +8,8 @@ function App() {
   useEffect(() => {
     fetch("data.json")
       .then((response) => response.json())
-      .then((data) => {
-        setProducts(data.data)
-      });
+      .then((data) => setProducts(data.data));
   }, []);
-
-  console.log(products[0]);
 
   return (
     <div className="App">
