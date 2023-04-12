@@ -4,6 +4,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import './App.css';
 import Scatter from './components/scatter';
 import NavBar from './components/navBar';
+import { Container } from '@mui/material';
 
 function App() {
   const [products, setProducts] = useState([]); 
@@ -40,7 +41,11 @@ function App() {
           </a>
         </header> */}
         <NavBar />
-        <Scatter data={products} />
+        <Container maxWidth="lg">
+          <Scatter data={products} />
+        </Container>
+        
+        <footer><a href="https://www.flaticon.com/free-icons/milk" title="milk icons">Milk icons created by lutfix - Flaticon</a></footer>
       </ThemeProvider>
     </div>
   );
